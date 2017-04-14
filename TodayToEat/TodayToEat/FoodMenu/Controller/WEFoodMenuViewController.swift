@@ -15,8 +15,22 @@ class WEFoodMenuViewController: WEBaseMainViewController, BMKMapViewDelegate {
         super.viewDidLoad()
         self.navigationItem.title = "吃啥找啥"
         setMapView()
+        
+        let addNumber: (Int, Int) -> Int = {
+            (a:Int, b:Int) -> Int in
+            return a+b
+        }
+        print(addNumber(3,5))
+        addBlock(frist: 3, second: 4) { (a, b, sum) in
+            print("\(a)+\(b)=\(sum)")
+        }
     }
     
+    
+    func addBlock(frist:Int, second: Int, completion:(_ a: Int, _ b: Int, _ sum: Int)-> ()){
+        let sum = frist + second
+        completion(frist,second,sum)
+    }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)

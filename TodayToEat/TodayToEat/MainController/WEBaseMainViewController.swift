@@ -17,7 +17,7 @@ class WEBaseMainViewController: UIViewController {
         self.view.backgroundColor = colorArray[index]
         
     } 
-    
+     
 
     /*
     // MARK: - Navigation

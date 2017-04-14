@@ -12,8 +12,9 @@ class WEFoodDrawViewController: WEBaseMainViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.navigationItem.title = "我抽"
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

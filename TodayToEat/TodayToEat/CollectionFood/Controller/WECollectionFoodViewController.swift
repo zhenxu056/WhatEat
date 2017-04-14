@@ -9,27 +9,55 @@
 import UIKit
 
 class WECollectionFoodViewController: WEBaseMainViewController {
-
+    
+    lazy var tableView: UITableView =  {
+        let temTableView = UITableView(frame: self.view.bounds)
+        temTableView.delegate = self
+        temTableView.dataSource = self
+        return temTableView
+    }()
+    
+    lazy var rightBarItem: UIBarButtonItem = {
+        let temRightBarItem = UIBarButtonItem(title: "删除", style: UIBarButtonItemStyle.plain, target: self, action:#selector(rightBarItemAction(sender:)))
+        temRightBarItem.tintColor = UIColor.white
+        return temRightBarItem
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.navigationItem.title = "收集"
+        addUI()
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension WECollectionFoodViewController {
+    func addUI() {
+        self.view.addSubview(tableView)
+        self.navigationItem.rightBarButtonItem = rightBarItem
+    }
+}
+
+extension WECollectionFoodViewController {
+    func rightBarItemAction(sender: UIBarButtonItem) {
+        print("我要删除")
+    }
+}
+
+extension WECollectionFoodViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 100
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellInd = "cell"
+        let cell: UITableViewCell = UITableViewCell(style: .default, reuseIdentifier: cellInd)
+        cell.textLabel?.text = "现在在第\(indexPath.row)个"
+        return cell
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        
+        print("你点击了    \(cell!.textLabel!.text)")
+    }
 }

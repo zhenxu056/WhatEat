@@ -12,7 +12,8 @@ class WEBaseNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationBar.barTintColor = UIColor.gray
+        self.navigationBar.barTintColor = UIColor.red
+        self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
     }
   
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
