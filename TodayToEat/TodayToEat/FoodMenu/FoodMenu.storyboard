@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dLJ-Vb-Qa4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Food Menu View Controller-->
+        <scene sceneID="Atc-bW-JMv">
+            <objects>
+                <viewController storyboardIdentifier="WEFoodMenuViewController" id="J30-tx-V6y" customClass="WEFoodMenuViewController" customModule="TodayToEat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UN5-lg-sBr"/>
+                        <viewControllerLayoutGuide type="bottom" id="zoU-Hg-tmX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vJb-UF-1e8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6uD-gv-oP9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVT-Gt-Wbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1024.8" y="170.46476761619192"/>
+        </scene>
+        <!--Base Navigation Controller-->
+        <scene sceneID="iHT-zx-2TF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dLJ-Vb-Qa4" customClass="WEBaseNavigationController" customModule="TodayToEat" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="idY-MF-lso">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="J30-tx-V6y" kind="relationship" relationship="rootViewController" id="c7d-4D-66G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IgD-mP-hfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.599999999999994" y="170.46476761619192"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,48 @@
+//
+//  WEFoodMenuViewController.swift
+//  TodayToEat
+//
+//  Created by RuiTong_MAC on 17/4/7.
+//  Copyright © 2017年 陈振旭. All rights reserved.
+//
+
+import UIKit
+
+class WEFoodMenuViewController: WEBaseMainViewController, BMKMapViewDelegate {
+    var _mapView: BMKMapView? //百度地图
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.title = "吃啥找啥"
+        setMapView()
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        _mapView?.viewWillDisappear()
+        _mapView?.delegate = nil // 不用时，置nil
+    }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */ 
+}
+
+//百度地图
+extension WEFoodMenuViewController {
+    func setMapView() {
+        _mapView = BMKMapView(frame: UIScreen.main.bounds)
+        _mapView?.viewWillAppear()
+        _mapView?.mapType = UInt(BMKMapTypeSatellite)
+        _mapView?.delegate = self // 此处记得不用的时候需要置nil，否则影响内存的释放
+        self.view.addSubview(_mapView!)
+    }
+    
+}
