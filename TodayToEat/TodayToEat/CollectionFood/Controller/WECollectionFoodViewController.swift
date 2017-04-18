@@ -10,10 +10,19 @@ import UIKit
 
 class WECollectionFoodViewController: WEBaseMainViewController {
     
-    lazy var listArray: NSMutableArray = {
+   fileprivate lazy var plistArray = { () -> Array<AnyObject> in
         let data = Bundle.main.path(forResource: "AlreadyFood", ofType: "plist")
-        let temArray: NSMutableArray = NSMutableArray(contentsOfFile: data!)!
+        let temArray  = NSMutableArray(contentsOfFile: data!)! as Array
         return temArray
+    }()
+    
+    fileprivate lazy var listArray: NSMutableArray = {
+        var array = NSMutableArray()
+        for dic in self.plistArray as! [[String: AnyObject]] {
+            let model = WEFoodModel.dictToModel(dic: dic)
+            array.add(model)
+        } 
+        return array
     }()
     
     lazy var tableView: UITableView =  {
@@ -33,7 +42,6 @@ class WECollectionFoodViewController: WEBaseMainViewController {
         super.viewDidLoad()
         self.navigationItem.title = "收集"
         addUI()
-        print(listArray)
     }
 }
 
@@ -45,8 +53,7 @@ extension WECollectionFoodViewController {
 }
 
 extension WECollectionFoodViewController {
-    func rightBarItemAction(sender: UIBarButtonItem) {
-        print("我要添加")
+    func rightBarItemAction(sender: UIBarButtonItem) { 
         let addFoodVC = WEAddFoodViewController()
         self.navigationController?.pushViewController(addFoodVC, animated: true)
         
@@ -60,20 +67,23 @@ extension WECollectionFoodViewController: UITableViewDataSource, UITableViewDele
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellInd = "cell"
-        let cell: UITableViewCell = UITableViewCell(style: .default, reuseIdentifier: cellInd)
-//        let dic = listArray[indexPath.row] as! Dictionary<Key: Hashable, Any>
-        cell.textLabel?.text = "现在在第\(indexPath.row)个"
+        let cell: UITableViewCell = UITableViewCell(style: .subtitle, reuseIdentifier: cellInd)
+        let model = listArray[indexPath.row] as! WEFoodModel
+        cell.textLabel?.text = "现在在第\(indexPath.row)个  名字叫\(model.foodName)"
+        cell.detailTextLabel?.text = model.desc
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
-        print("你点击了    \(String(describing: cell!.textLabel!.text))")
+        print("你点击了    \(String(describing: cell!.textLabel!.text))") 
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        print("我删除了")
+        if editingStyle == .delete {
+            print("我删除了")
+        }
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

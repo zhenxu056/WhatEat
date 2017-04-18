@@ -8,191 +8,47 @@
 		<key>id</key>
 		<string>1</string>
 		<key>foodName</key>
-		<string>土豆</string>
+		<string>辣椒</string>
 	</dict>
 	<dict>
 		<key>describe</key>
 		<string>这就是土豆，黄色的</string>
 		<key>id</key>
-		<string>1</string>
+		<string>2</string>
 		<key>foodName</key>
-		<string>土豆</string>
+		<string>西瓜</string>
 	</dict>
 	<dict>
 		<key>describe</key>
 		<string>这就是土豆，黄色的</string>
 		<key>id</key>
-		<string>1</string>
+		<string>3</string>
 		<key>foodName</key>
-		<string>土豆</string>
+		<string>苦瓜</string>
 	</dict>
 	<dict>
 		<key>describe</key>
 		<string>这就是土豆，黄色的</string>
 		<key>id</key>
-		<string>1</string>
+		<string>4</string>
 		<key>foodName</key>
-		<string>土豆</string>
+		<string>西红柿</string>
 	</dict>
 	<dict>
 		<key>describe</key>
 		<string>这就是土豆，黄色的</string>
 		<key>id</key>
-		<string>1</string>
+		<string>5</string>
 		<key>foodName</key>
-		<string>土豆</string>
+		<string>鸡蛋</string>
 	</dict>
 	<dict>
 		<key>describe</key>
 		<string>这就是土豆，黄色的</string>
 		<key>id</key>
-		<string>1</string>
+		<string>6</string>
 		<key>foodName</key>
-		<string>土豆</string>
-	</dict>
-	<dict>
-		<key>describe</key>
-		<string>这就是土豆，黄色的</string>
-		<key>id</key>
-		<string>1</string>
-		<key>foodName</key>
-		<string>土豆</string>
-	</dict>
-	<dict>
-		<key>describe</key>
-		<string>这就是土豆，黄色的</string>
-		<key>id</key>
-		<string>1</string>
-		<key>foodName</key>
-		<string>土豆</string>
-	</dict>
-	<dict>
-		<key>describe</key>
-		<string>这就是土豆，黄色的</string>
-		<key>id</key>
-		<string>1</string>
-		<key>foodName</key>
-		<string>土豆</string>
-	</dict>
-	<dict>
-		<key>describe</key>
-		<string>这就是土豆，黄色的</string>
-		<key>id</key>
-		<string>1</string>
-		<key>foodName</key>
-		<string>土豆</string>
-	</dict>
-	<dict>
-		<key>describe</key>
-		<string>这就是土豆，黄色的</string>
-		<key>id</key>
-		<string>1</string>
-		<key>foodName</key>
-		<string>土豆</string>
-	</dict>
-	<dict>
-		<key>describe</key>
-		<string>这就是土豆，黄色的</string>
-		<key>id</key>
-		<string>1</string>
-		<key>foodName</key>
-		<string>土豆</string>
-	</dict>
-	<dict>
-		<key>describe</key>
-		<string>这就是土豆，黄色的</string>
-		<key>id</key>
-		<string>1</string>
-		<key>foodName</key>
-		<string>土豆</string>
-	</dict>
-	<dict>
-		<key>describe</key>
-		<string>这就是土豆，黄色的</string>
-		<key>id</key>
-		<string>1</string>
-		<key>foodName</key>
-		<string>土豆</string>
-	</dict>
-	<dict>
-		<key>describe</key>
-		<string>这就是土豆，黄色的</string>
-		<key>id</key>
-		<string>1</string>
-		<key>foodName</key>
-		<string>土豆</string>
-	</dict>
-	<dict>
-		<key>describe</key>
-		<string>这就是土豆，黄色的</string>
-		<key>id</key>
-		<string>1</string>
-		<key>foodName</key>
-		<string>土豆</string>
-	</dict>
-	<dict>
-		<key>describe</key>
-		<string>这就是土豆，黄色的</string>
-		<key>id</key>
-		<string>1</string>
-		<key>foodName</key>
-		<string>土豆</string>
-	</dict>
-	<dict>
-		<key>describe</key>
-		<string>这就是土豆，黄色的</string>
-		<key>id</key>
-		<string>1</string>
-		<key>foodName</key>
-		<string>土豆</string>
-	</dict>
-	<dict>
-		<key>describe</key>
-		<string>这就是土豆，黄色的</string>
-		<key>id</key>
-		<string>1</string>
-		<key>foodName</key>
-		<string>土豆</string>
-	</dict>
-	<dict>
-		<key>describe</key>
-		<string>这就是土豆，黄色的</string>
-		<key>id</key>
-		<string>1</string>
-		<key>foodName</key>
-		<string>土豆</string>
-	</dict>
-	<dict>
-		<key>describe</key>
-		<string>这就是土豆，黄色的</string>
-		<key>id</key>
-		<string>1</string>
-		<key>foodName</key>
-		<string>土豆</string>
-	</dict>
-	<dict>
-		<key>describe</key>
-		<string>这就是土豆，黄色的</string>
-		<key>id</key>
-		<string>1</string>
-		<key>foodName</key>
-		<string>土豆</string>
-	</dict>
-	<dict>
-		<key>describe</key>
-		<string>这就是土豆，黄色的</string>
-		<key>id</key>
-		<string>1</string>
-		<key>foodName</key>
-		<string>土豆</string>
-	</dict>
-	<dict>
-		<key>describe</key>
-		<string>这就是土豆，黄色的</string>
-		<key>id</key>
-		<string>1</string>
-		<key>foodName</key>
-		<string>土豆</string>
+		<string>鸡肉</string>
 	</dict>
 </array>
 </plist>
