@@ -30,7 +30,7 @@ class WEAddFoodViewController: WEBaseMainViewController {
 
 extension WEAddFoodViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,9 +42,11 @@ extension WEAddFoodViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 1 {
-            return contentHeight
+        if indexPath.section == 0 {
+            return 120
         } else if indexPath.section == 2 {
+            return contentHeight
+        } else if indexPath.section == 3 {
             return 60
         }
         return 44
@@ -52,10 +54,19 @@ extension WEAddFoodViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
+            let textField = "WEImageCenterTableViewCell"
+            let cell: WEImageCenterTableViewCell = WEImageCenterTableViewCell(style: .subtitle, reuseIdentifier: textField)
+            cell.backgroundColor = UIColor.clear
+            cell.controller = self
+            cell.block = { sender in
+                
+            }
+            return cell
+        } else if indexPath.section == 1 {
             let textField = "WEAddFoodTableViewCell"
             let cell: WEAddFoodTableViewCell = WEAddFoodTableViewCell(style: .subtitle, reuseIdentifier: textField)
             return cell
-        } else if indexPath.section == 1 {
+        } else if indexPath.section == 2 {
             let textField = "WEFoodTextViewTableViewCell"
             let cell: WEFoodTextViewTableViewCell = WEFoodTextViewTableViewCell(style: .subtitle, reuseIdentifier: textField)
             cell.backgroundColor = UIColor.clear
@@ -66,16 +77,10 @@ extension WEAddFoodViewController: UITableViewDataSource, UITableViewDelegate {
             let cell: WEButtonTableViewCell = WEButtonTableViewCell(style: .subtitle, reuseIdentifier: textField)
             cell.backgroundColor = UIColor.clear
             cell.block =  { sender in
-                print("我保存了")
+                print("我保存了  \(sender.currentTitle)")
             }
             return cell
         }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        tableView.deselectRow(at: indexPath, animated: true)
-        print("你点击了    \(String(describing: cell!.textLabel!.text))")
     }
 }
 

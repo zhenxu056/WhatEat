@@ -29,6 +29,8 @@ class WECollectionFoodViewController: WEBaseMainViewController {
         let temTableView = UITableView(frame: self.view.bounds)
         temTableView.delegate = self
         temTableView.dataSource = self
+        temTableView.separatorStyle = .singleLine
+        temTableView.separatorInset = UIEdgeInsets(top: 0, left: 100, bottom: 0, right: 0)
         return temTableView
     }()
     
@@ -65,12 +67,13 @@ extension WECollectionFoodViewController: UITableViewDataSource, UITableViewDele
         return listArray.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellInd = "cell"
-        let cell: UITableViewCell = UITableViewCell(style: .subtitle, reuseIdentifier: cellInd)
-        let model = listArray[indexPath.row] as! WEFoodModel
-        cell.textLabel?.text = "现在在第\(indexPath.row)个  名字叫\(model.foodName)"
-        cell.detailTextLabel?.text = model.desc
+        let cell: WECollectionFoodTableViewCell = WECollectionFoodTableViewCell(style: .subtitle, reuseIdentifier: cellInd)
         return cell
     }
     

@@ -90,6 +90,9 @@
 		BDD851A41E97730E00F0C6A6 /* WETabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD851A31E97730E00F0C6A6 /* WETabBarViewController.swift */; };
 		BDD851A61E977EB300F0C6A6 /* Collection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD851A51E977EB300F0C6A6 /* Collection.storyboard */; };
 		BDD851A81E977EC000F0C6A6 /* FoodDraw.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD851A71E977EC000F0C6A6 /* FoodDraw.storyboard */; };
+		BDE00BF11EA6ED29001B0215 /* WEImageCenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE00BF01EA6ED29001B0215 /* WEImageCenterTableViewCell.swift */; };
+		BDE00C581EA70BDA001B0215 /* WECollectionFoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE00C571EA70BDA001B0215 /* WECollectionFoodTableViewCell.swift */; };
+		BDE00C5A1EA742EC001B0215 /* WEDrawFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE00C591EA742EC001B0215 /* WEDrawFoodView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,6 +205,9 @@
 		BDD851A31E97730E00F0C6A6 /* WETabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WETabBarViewController.swift; sourceTree = "<group>"; };
 		BDD851A51E977EB300F0C6A6 /* Collection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Collection.storyboard; sourceTree = "<group>"; };
 		BDD851A71E977EC000F0C6A6 /* FoodDraw.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FoodDraw.storyboard; sourceTree = "<group>"; };
+		BDE00BF01EA6ED29001B0215 /* WEImageCenterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WEImageCenterTableViewCell.swift; sourceTree = "<group>"; };
+		BDE00C571EA70BDA001B0215 /* WECollectionFoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WECollectionFoodTableViewCell.swift; sourceTree = "<group>"; };
+		BDE00C591EA742EC001B0215 /* WEDrawFoodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WEDrawFoodView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,6 +387,8 @@
 				BD484FB11EA5B21200171A05 /* WEAddFoodTableViewCell.swift */,
 				BD484FB51EA5BBA700171A05 /* WEFoodTextViewTableViewCell.swift */,
 				BD484FC21EA5C34600171A05 /* WEButtonTableViewCell.swift */,
+				BDE00BF01EA6ED29001B0215 /* WEImageCenterTableViewCell.swift */,
+				BDE00C571EA70BDA001B0215 /* WECollectionFoodTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -423,6 +431,7 @@
 		BD93FC2F1E9734E5006834F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BDE00C591EA742EC001B0215 /* WEDrawFoodView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -746,14 +755,17 @@
 				BDB0C12D1EA600BC0060C30E /* ConstraintLayoutSupportDSL.swift in Sources */,
 				BDB0C13C1EA600BC0060C30E /* ConstraintViewDSL.swift in Sources */,
 				176E88A21EA13D1800878560 /* WEAddFoodViewController.swift in Sources */,
+				BDE00C5A1EA742EC001B0215 /* WEDrawFoodView.swift in Sources */,
 				BDB0C1341EA600BC0060C30E /* ConstraintMultiplierTarget.swift in Sources */,
 				BDB0C12F1EA600BC0060C30E /* ConstraintMakerEditable.swift in Sources */,
 				BD27F3111EA491FA00490CC0 /* collectionFood.xcdatamodeld in Sources */,
+				BDE00BF11EA6ED29001B0215 /* WEImageCenterTableViewCell.swift in Sources */,
 				BDB0C1241EA600BC0060C30E /* ConstraintDescription.swift in Sources */,
 				BDB0C1361EA600BC0060C30E /* ConstraintPriority.swift in Sources */,
 				BDB0C1271EA600BC0060C30E /* ConstraintInsetTarget.swift in Sources */,
 				BDB0C1291EA600BC0060C30E /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				BD484FB21EA5B21200171A05 /* WEAddFoodTableViewCell.swift in Sources */,
+				BDE00C581EA70BDA001B0215 /* WECollectionFoodTableViewCell.swift in Sources */,
 				BDB0C1351EA600BC0060C30E /* ConstraintOffsetTarget.swift in Sources */,
 				BDB0C12B1EA600BC0060C30E /* ConstraintLayoutGuideDSL.swift in Sources */,
 				BDB0C1321EA600BC0060C30E /* ConstraintMakerPriortizable.swift in Sources */,
@@ -932,7 +944,7 @@
 					"$(PROJECT_DIR)/TodayToEat/ThirdFramework/thirdlibs",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.XMRuiTong.MySchoolTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.XMRuiTong.chisha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/TodayToEat/TodayToEat-Bridging-Header.h";
@@ -960,7 +972,7 @@
 					"$(PROJECT_DIR)/TodayToEat/ThirdFramework/thirdlibs",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.XMRuiTong.MySchoolTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.XMRuiTong.chisha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/TodayToEat/TodayToEat-Bridging-Header.h";

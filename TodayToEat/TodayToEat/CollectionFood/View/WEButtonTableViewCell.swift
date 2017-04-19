@@ -19,18 +19,17 @@ class WEButtonTableViewCell: UITableViewCell {
     var block: buttonAciton?
     
     let button: UIButton = {
-        let button = UIButton()
-        button.setBackgroundImage(UIImage(named:"bg_btn_blue"), for: .normal) 
-        button.setTitle("保存", for: .normal)
-        button.setTitleColor(UIColor.white, for: .normal)
-        button.addTarget(self, action: #selector(submitButtonAction(sender:)), for: .touchUpInside)
-        return button
+        let temButton = UIButton()
+        temButton.setBackgroundImage(UIImage(named:"bg_btn_blue"), for: .normal)
+        temButton.setTitle("保存", for: .normal)
+        temButton.setTitleColor(UIColor.white, for: .normal)
+        return temButton
     }()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         if !self.isEqual(nil) {
-            print(self.contentView.frame.height)
+            button.addTarget(self, action: #selector(submitButtonAction(sender:)), for: .touchUpInside)
             self.contentView.addSubview(button)
             button.snp.makeConstraints({ (make) in
                 make.center.equalTo(self.contentView)
@@ -45,6 +44,7 @@ class WEButtonTableViewCell: UITableViewCell {
 
 extension WEButtonTableViewCell {
     func submitButtonAction(sender: UIButton) {
+        print("保存")
         if self.block != nil {
             self.block!(sender)
         }
