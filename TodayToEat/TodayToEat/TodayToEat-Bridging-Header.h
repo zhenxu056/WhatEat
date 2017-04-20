@@ -15,3 +15,7 @@
 #import "SZTextView.h"
 
 #import "SnapKit.h"
+
+#import "LotteryRouletteView.h" 
+
+#import "RGPaperLayout.h"

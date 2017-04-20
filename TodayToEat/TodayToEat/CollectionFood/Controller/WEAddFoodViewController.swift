@@ -77,7 +77,7 @@ extension WEAddFoodViewController: UITableViewDataSource, UITableViewDelegate {
             let cell: WEButtonTableViewCell = WEButtonTableViewCell(style: .subtitle, reuseIdentifier: textField)
             cell.backgroundColor = UIColor.clear
             cell.block =  { sender in
-                print("我保存了  \(sender.currentTitle)")
+                print("我保存了  \(sender.currentTitle!)")
             }
             return cell
         }

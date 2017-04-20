@@ -174,9 +174,9 @@ public class FoodDB: NSManagedObject {
             
             //遍历查询的结果
             for info:FoodDB in fetchedObjects as! [FoodDB]{
-                print("creatTime=\(info.creatTime)")
-                print("name=\(info.name)")
-                print("name=\(info.name)")
+                print("creatTime=\(info.creatTime!)")
+                print("name=\(info.name!)")
+                print("name=\(info.name!)")
                 print("-------------------")
             }
             

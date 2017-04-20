@@ -22,6 +22,7 @@
 		BD484FB61EA5BBA700171A05 /* WEFoodTextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD484FB51EA5BBA700171A05 /* WEFoodTextViewTableViewCell.swift */; };
 		BD484FBF1EA5BC4100171A05 /* SZTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD484FBE1EA5BC4100171A05 /* SZTextView.m */; };
 		BD484FC31EA5C34600171A05 /* WEButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD484FC21EA5C34600171A05 /* WEButtonTableViewCell.swift */; };
+		BD5EA3F91EA84D11000C9683 /* LotteryRouletteView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5EA3F81EA84D11000C9683 /* LotteryRouletteView.m */; };
 		BD93FBFA1E9733B3006834F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD93FBF91E9733B3006834F1 /* AppDelegate.swift */; };
 		BD93FC011E9733B3006834F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD93FC001E9733B3006834F1 /* Assets.xcassets */; };
 		BD93FC041E9733B3006834F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD93FC021E9733B3006834F1 /* LaunchScreen.storyboard */; };
@@ -93,6 +94,9 @@
 		BDE00BF11EA6ED29001B0215 /* WEImageCenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE00BF01EA6ED29001B0215 /* WEImageCenterTableViewCell.swift */; };
 		BDE00C581EA70BDA001B0215 /* WECollectionFoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE00C571EA70BDA001B0215 /* WECollectionFoodTableViewCell.swift */; };
 		BDE00C5A1EA742EC001B0215 /* WEDrawFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE00C591EA742EC001B0215 /* WEDrawFoodView.swift */; };
+		BDF977491EA8A5E700085129 /* RGPaperLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF977481EA8A5E700085129 /* RGPaperLayout.m */; };
+		BDF9774D1EA8AA4700085129 /* WEDrawFoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF9774C1EA8AA4700085129 /* WEDrawFoodCollectionViewCell.swift */; };
+		BDF977551EA8B3A400085129 /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BDF977541EA8B3A400085129 /* timg.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +133,8 @@
 		BD484FBD1EA5BC4100171A05 /* SZTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZTextView.h; sourceTree = "<group>"; };
 		BD484FBE1EA5BC4100171A05 /* SZTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTextView.m; sourceTree = "<group>"; };
 		BD484FC21EA5C34600171A05 /* WEButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WEButtonTableViewCell.swift; sourceTree = "<group>"; };
+		BD5EA3F71EA84D11000C9683 /* LotteryRouletteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryRouletteView.h; sourceTree = "<group>"; };
+		BD5EA3F81EA84D11000C9683 /* LotteryRouletteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryRouletteView.m; sourceTree = "<group>"; };
 		BD93FBF61E9733B3006834F1 /* TodayToEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayToEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD93FBF91E9733B3006834F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD93FC001E9733B3006834F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -208,6 +214,10 @@
 		BDE00BF01EA6ED29001B0215 /* WEImageCenterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WEImageCenterTableViewCell.swift; sourceTree = "<group>"; };
 		BDE00C571EA70BDA001B0215 /* WECollectionFoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WECollectionFoodTableViewCell.swift; sourceTree = "<group>"; };
 		BDE00C591EA742EC001B0215 /* WEDrawFoodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WEDrawFoodView.swift; sourceTree = "<group>"; };
+		BDF977471EA8A5E700085129 /* RGPaperLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGPaperLayout.h; sourceTree = "<group>"; };
+		BDF977481EA8A5E700085129 /* RGPaperLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGPaperLayout.m; sourceTree = "<group>"; };
+		BDF9774C1EA8AA4700085129 /* WEDrawFoodCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WEDrawFoodCollectionViewCell.swift; sourceTree = "<group>"; };
+		BDF977541EA8B3A400085129 /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +295,8 @@
 		BD484FBB1EA5BC4100171A05 /* libraries */ = {
 			isa = PBXGroup;
 			children = (
+				BDF977461EA8A5D200085129 /* drawCollection */,
+				BD5EA3F61EA84CFF000C9683 /* DrawLuck */,
 				BDB0C0FC1EA600BC0060C30E /* Source */,
 				BD484FBC1EA5BC4100171A05 /* SZTextView */,
 			);
@@ -298,6 +310,15 @@
 				BD484FBE1EA5BC4100171A05 /* SZTextView.m */,
 			);
 			path = SZTextView;
+			sourceTree = "<group>";
+		};
+		BD5EA3F61EA84CFF000C9683 /* DrawLuck */ = {
+			isa = PBXGroup;
+			children = (
+				BD5EA3F71EA84D11000C9683 /* LotteryRouletteView.h */,
+				BD5EA3F81EA84D11000C9683 /* LotteryRouletteView.m */,
+			);
+			path = DrawLuck;
 			sourceTree = "<group>";
 		};
 		BD93FBED1E9733B3006834F1 = {
@@ -404,6 +425,7 @@
 		BD93FC2C1E9734E5006834F1 /* FoodDraw */ = {
 			isa = PBXGroup;
 			children = (
+				BDF977541EA8B3A400085129 /* timg.jpeg */,
 				BD93FC2D1E9734E5006834F1 /* Controller */,
 				BD93FC2E1E9734E5006834F1 /* Model */,
 				BD93FC2F1E9734E5006834F1 /* View */,
@@ -432,6 +454,7 @@
 			isa = PBXGroup;
 			children = (
 				BDE00C591EA742EC001B0215 /* WEDrawFoodView.swift */,
+				BDF9774C1EA8AA4700085129 /* WEDrawFoodCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -587,6 +610,15 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		BDF977461EA8A5D200085129 /* drawCollection */ = {
+			isa = PBXGroup;
+			children = (
+				BDF977471EA8A5E700085129 /* RGPaperLayout.h */,
+				BDF977481EA8A5E700085129 /* RGPaperLayout.m */,
+			);
+			path = drawCollection;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -707,6 +739,7 @@
 				BD9A10B51E9B2C8000A5C5B9 /* mapapi.bundle in Resources */,
 				BD93FC011E9733B3006834F1 /* Assets.xcassets in Resources */,
 				BD93FC481E976900006834F1 /* FoodMenu.storyboard in Resources */,
+				BDF977551EA8B3A400085129 /* timg.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,16 +778,19 @@
 				BDB0C1221EA600BC0060C30E /* ConstraintConfig.swift in Sources */,
 				BD484FB41EA5B68100171A05 /* WEConfigureFile.swift in Sources */,
 				BDB0C12A1EA600BC0060C30E /* ConstraintLayoutGuide.swift in Sources */,
+				BD5EA3F91EA84D11000C9683 /* LotteryRouletteView.m in Sources */,
 				BD93FC401E9736A7006834F1 /* WEFoodDrawViewController.swift in Sources */,
 				BD27F30E1EA466E400490CC0 /* WEFoodViewModel.swift in Sources */,
 				BD93FC461E9768E0006834F1 /* WEBaseNavigationController.swift in Sources */,
 				BDB0C13B1EA600BC0060C30E /* ConstraintView.swift in Sources */,
+				BDF977491EA8A5E700085129 /* RGPaperLayout.m in Sources */,
 				BD484FB61EA5BBA700171A05 /* WEFoodTextViewTableViewCell.swift in Sources */,
 				BD484FAD1EA5A2CC00171A05 /* FoodDB+CoreDataClass.swift in Sources */,
 				BDB0C1261EA600BC0060C30E /* ConstraintInsets.swift in Sources */,
 				BDB0C12D1EA600BC0060C30E /* ConstraintLayoutSupportDSL.swift in Sources */,
 				BDB0C13C1EA600BC0060C30E /* ConstraintViewDSL.swift in Sources */,
 				176E88A21EA13D1800878560 /* WEAddFoodViewController.swift in Sources */,
+				BDF9774D1EA8AA4700085129 /* WEDrawFoodCollectionViewCell.swift in Sources */,
 				BDE00C5A1EA742EC001B0215 /* WEDrawFoodView.swift in Sources */,
 				BDB0C1341EA600BC0060C30E /* ConstraintMultiplierTarget.swift in Sources */,
 				BDB0C12F1EA600BC0060C30E /* ConstraintMakerEditable.swift in Sources */,

@@ -10,17 +10,17 @@ import UIKit
 
 class WEFoodDrawViewController: WEBaseMainViewController {
     
+    
     let drawView: WEDrawFoodView = {
         let drawView = WEDrawFoodView()
-        drawView.backgroundColor = UIColor.orange
         return drawView
     }()
     
     let collectionView: UICollectionView = {
-        var layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 30, height: 40)
-        let collectionView = UICollectionView(frame: CGRect.init(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
-        collectionView.backgroundColor = UIColor.blue
+        var layout = RGPaperLayout()
+        let collectionView = UICollectionView(frame: CGRect.init(x: 0, y: 0, width: 0, height:0), collectionViewLayout: layout)
+        collectionView.register(WEDrawFoodCollectionViewCell.self, forCellWithReuseIdentifier: "WEDrawFoodCollectionViewCell")
+        collectionView.backgroundColor = UIColor.clear
         return collectionView
     }()
     
@@ -35,8 +35,11 @@ class WEFoodDrawViewController: WEBaseMainViewController {
 extension WEFoodDrawViewController {
     func setUI() {
         
-        let viewSize:CGSize = self.view.bounds.size
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
+        let viewSize:CGSize = self.view.bounds.size
+        drawView.initView(array: ["苹果","香蕉","菠萝","橘子"])
         self.view.addSubview(drawView)
         drawView.snp.makeConstraints { (make) in
             make.topMargin.equalTo(65)
@@ -56,13 +59,20 @@ extension WEFoodDrawViewController {
 
 extension WEFoodDrawViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 1000
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = UIColor.red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WEDrawFoodCollectionViewCell", for: indexPath) as! WEDrawFoodCollectionViewCell
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 10
+        cell.clipsToBounds = true
         return cell
     }
 }
