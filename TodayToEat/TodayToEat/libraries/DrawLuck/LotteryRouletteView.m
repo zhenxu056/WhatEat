@@ -180,7 +180,10 @@
     }
     else{
         [self.timer invalidate];
-        self.timer = [NSTimer scheduledTimerWithTimeInterval:time target:self selector:@selector(rollingPrize) userInfo:nil repeats:NO];
+//        self.timer = [NSTimer scheduledTimerWithTimeInterval:time target:self selector:@selector(rollingPrize) userInfo:nil repeats:NO];
+        
+        self.timer = [NSTimer timerWithTimeInterval:time target:self selector:@selector(rollingPrize) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
     }
 }
 
