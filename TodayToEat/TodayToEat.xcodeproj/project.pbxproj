@@ -22,6 +22,8 @@
 		BD484FB61EA5BBA700171A05 /* WEFoodTextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD484FB51EA5BBA700171A05 /* WEFoodTextViewTableViewCell.swift */; };
 		BD484FBF1EA5BC4100171A05 /* SZTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD484FBE1EA5BC4100171A05 /* SZTextView.m */; };
 		BD484FC31EA5C34600171A05 /* WEButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD484FC21EA5C34600171A05 /* WEButtonTableViewCell.swift */; };
+		BD5D6B711EA99B3B001F38C8 /* WESelectMenuListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D6B701EA99B3B001F38C8 /* WESelectMenuListView.swift */; };
+		BD5D6B731EA9B0D3001F38C8 /* WEFoodNameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D6B721EA9B0D3001F38C8 /* WEFoodNameCollectionViewCell.swift */; };
 		BD5EA3F91EA84D11000C9683 /* LotteryRouletteView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5EA3F81EA84D11000C9683 /* LotteryRouletteView.m */; };
 		BD93FBFA1E9733B3006834F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD93FBF91E9733B3006834F1 /* AppDelegate.swift */; };
 		BD93FC011E9733B3006834F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD93FC001E9733B3006834F1 /* Assets.xcassets */; };
@@ -133,6 +135,8 @@
 		BD484FBD1EA5BC4100171A05 /* SZTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZTextView.h; sourceTree = "<group>"; };
 		BD484FBE1EA5BC4100171A05 /* SZTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZTextView.m; sourceTree = "<group>"; };
 		BD484FC21EA5C34600171A05 /* WEButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WEButtonTableViewCell.swift; sourceTree = "<group>"; };
+		BD5D6B701EA99B3B001F38C8 /* WESelectMenuListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WESelectMenuListView.swift; sourceTree = "<group>"; };
+		BD5D6B721EA9B0D3001F38C8 /* WEFoodNameCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WEFoodNameCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD5EA3F71EA84D11000C9683 /* LotteryRouletteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryRouletteView.h; sourceTree = "<group>"; };
 		BD5EA3F81EA84D11000C9683 /* LotteryRouletteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryRouletteView.m; sourceTree = "<group>"; };
 		BD93FBF61E9733B3006834F1 /* TodayToEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayToEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -455,6 +459,8 @@
 			children = (
 				BDE00C591EA742EC001B0215 /* WEDrawFoodView.swift */,
 				BDF9774C1EA8AA4700085129 /* WEDrawFoodCollectionViewCell.swift */,
+				BD5D6B701EA99B3B001F38C8 /* WESelectMenuListView.swift */,
+				BD5D6B721EA9B0D3001F38C8 /* WEFoodNameCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -772,6 +778,7 @@
 				BDB0C1251EA600BC0060C30E /* ConstraintDSL.swift in Sources */,
 				BDB0C13A1EA600BC0060C30E /* ConstraintView+Extensions.swift in Sources */,
 				176E88CD1EA147FB00878560 /* WEFoodModel.swift in Sources */,
+				BD5D6B711EA99B3B001F38C8 /* WESelectMenuListView.swift in Sources */,
 				BDB0C1381EA600BC0060C30E /* ConstraintRelatableTarget.swift in Sources */,
 				BD484FAE1EA5A2CC00171A05 /* FoodDB+CoreDataProperties.swift in Sources */,
 				BDB0C1371EA600BC0060C30E /* ConstraintPriorityTarget.swift in Sources */,
@@ -802,6 +809,7 @@
 				BDB0C1291EA600BC0060C30E /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				BD484FB21EA5B21200171A05 /* WEAddFoodTableViewCell.swift in Sources */,
 				BDE00C581EA70BDA001B0215 /* WECollectionFoodTableViewCell.swift in Sources */,
+				BD5D6B731EA9B0D3001F38C8 /* WEFoodNameCollectionViewCell.swift in Sources */,
 				BDB0C1351EA600BC0060C30E /* ConstraintOffsetTarget.swift in Sources */,
 				BDB0C12B1EA600BC0060C30E /* ConstraintLayoutGuideDSL.swift in Sources */,
 				BDB0C1321EA600BC0060C30E /* ConstraintMakerPriortizable.swift in Sources */,

@@ -28,13 +28,18 @@ class WEDrawFoodCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         if !self.isEqual(nil) {
+            
+            self.layer.borderColor = UIColor.black.cgColor
+            self.layer.borderWidth = 1
+            self.layer.cornerRadius = 10
+            self.clipsToBounds = true
+            
             self.contentView.addSubview(imageView)
                          
             imageView.image = UIImage.init(named: "timg.jpeg")
             
             let effect: UIVisualEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
-            let effectView = UIVisualEffectView(effect: effect)
-//            effectView.frame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height/4)
+            let effectView = UIVisualEffectView(effect: effect) 
             
             effectView.contentView.addSubview(title)
             self.contentView.insertSubview(effectView, at: 1)

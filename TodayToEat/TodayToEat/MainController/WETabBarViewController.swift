@@ -40,5 +40,6 @@ extension WETabBarViewController {
         
         self.viewControllers = rootControlArray 
         
+        self.selectedIndex = 1
     }
 }

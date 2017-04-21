@@ -11,6 +11,9 @@ import UIKit
 class WEFoodDrawViewController: WEBaseMainViewController {
     
     
+    
+    let dataList: Array = ["苹果","香蕉","橘子","菠萝","水蜜桃","西瓜","葡萄","水晶梨"]
+    
     let drawView: WEDrawFoodView = {
         let drawView = WEDrawFoodView()
         return drawView
@@ -24,6 +27,13 @@ class WEFoodDrawViewController: WEBaseMainViewController {
         return collectionView
     }()
     
+    lazy var rightBarItem: UIBarButtonItem = {
+        let temRightBarItem = UIBarButtonItem(title: "编辑", style: UIBarButtonItemStyle.plain, target: self, action:#selector(rightBarItemAction(sender:)))
+        temRightBarItem.tintColor = UIColor.white
+        return temRightBarItem
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "抽啥吃"
@@ -31,15 +41,27 @@ class WEFoodDrawViewController: WEBaseMainViewController {
     } 
 }
 
+extension WEFoodDrawViewController {
+    func rightBarItemAction(sender: UIBarButtonItem) {
+        let window = UIApplication.shared.keyWindow
+        let selectMenu: WESelectMenuListView = WESelectMenuListView()
+        selectMenu.frame = UIScreen.main.bounds
+        window?.addSubview(selectMenu) 
+    }
+}
 
 extension WEFoodDrawViewController {
     func setUI() {
+        self.navigationItem.rightBarButtonItem = rightBarItem
         
         collectionView.delegate = self
         collectionView.dataSource = self
         
         let viewSize:CGSize = self.view.bounds.size
-        drawView.initView(array: ["苹果","香蕉","菠萝","橘子"])
+        drawView.initView(array: dataList, completion: { index in
+            print(index)
+            self.collectionView.scrollToItem(at: IndexPath.init(row: index, section: 0), at: .left, animated: true)
+        })
         self.view.addSubview(drawView)
         drawView.snp.makeConstraints { (make) in
             make.topMargin.equalTo(65)
@@ -54,6 +76,7 @@ extension WEFoodDrawViewController {
             make.left.right.equalToSuperview()
             make.bottom.equalTo(-50)
         }
+        
     }
 }
 
@@ -64,15 +87,12 @@ extension WEFoodDrawViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1000
+        return dataList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WEDrawFoodCollectionViewCell", for: indexPath) as! WEDrawFoodCollectionViewCell
-        cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 10
-        cell.clipsToBounds = true
+        cell.title.text = dataList[indexPath.row]
         return cell
     }
 }
