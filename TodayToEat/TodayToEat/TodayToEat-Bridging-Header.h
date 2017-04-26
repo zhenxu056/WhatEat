@@ -2,6 +2,9 @@
 //  Use this file to import your target's public headers that you would like to expose to Swift.
 //
  
+
+#ifdef __OBJC__
+
 //百度地图API
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
 #import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
@@ -16,6 +19,8 @@
 
 #import "SnapKit.h"
 
-#import "LotteryRouletteView.h" 
+#import "LotteryRouletteView.h"
 
 #import "RGPaperLayout.h"
+
+#endif

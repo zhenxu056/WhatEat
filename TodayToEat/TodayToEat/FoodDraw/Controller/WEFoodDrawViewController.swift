@@ -12,7 +12,7 @@ class WEFoodDrawViewController: WEBaseMainViewController {
     
     
     
-    let dataList: Array = ["苹果","香蕉","橘子","菠萝","水蜜桃","西瓜","葡萄","水晶梨"]
+    var dataList: NSMutableArray = NSMutableArray()
     
     let drawView: WEDrawFoodView = {
         let drawView = WEDrawFoodView()
@@ -37,6 +37,7 @@ class WEFoodDrawViewController: WEBaseMainViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "抽啥吃"
+        reloadData()
         setUI()
     } 
 }
@@ -51,6 +52,14 @@ extension WEFoodDrawViewController {
 }
 
 extension WEFoodDrawViewController {
+    func reloadData() {
+        let data = ["苹果","香蕉","橘子","菠萝","水蜜桃","西瓜","葡萄","水晶梨"]
+        for name in data {
+            let dataModel = WEDrawFoodListModel.dictToModel(dic: ["foodName": name as AnyObject ,"describe":"desc" as AnyObject ,"isSelect":false as AnyObject ,"id":"99" as AnyObject])
+            dataList.add(dataModel)
+        }
+        
+    }
     func setUI() {
         self.navigationItem.rightBarButtonItem = rightBarItem
         
@@ -58,9 +67,22 @@ extension WEFoodDrawViewController {
         collectionView.dataSource = self
         
         let viewSize:CGSize = self.view.bounds.size
-        drawView.initView(array: dataList, completion: { index in
-            print(index)
-            self.collectionView.scrollToItem(at: IndexPath.init(row: index, section: 0), at: .left, animated: true)
+        var listName: Array<String> = Array()
+        for model in dataList {
+            listName.append((model as! WEDrawFoodListModel).foodName)
+        }
+        drawView.initView(array: listName, completion: { index in
+            self.dataList.removeAllObjects()
+            self.reloadData()
+            let model: WEDrawFoodListModel = self.dataList[index] as! WEDrawFoodListModel
+            model.isSelect = true
+            self.dataList.replaceObject(at: index, with: model)
+            if index == 0 {
+                self.collectionView.scrollToItem(at: IndexPath.init(row: index, section: 0), at: .left, animated: true)
+            } else {
+                self.collectionView.scrollToItem(at: IndexPath.init(row: index-1, section: 0), at: .left, animated: true)
+            }
+            self.collectionView.reloadData()
         })
         self.view.addSubview(drawView)
         drawView.snp.makeConstraints { (make) in
@@ -87,12 +109,20 @@ extension WEFoodDrawViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataList.count
+        return dataList.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WEDrawFoodCollectionViewCell", for: indexPath) as! WEDrawFoodCollectionViewCell
-        cell.title.text = dataList[indexPath.row]
+        if indexPath.row != dataList.count {
+            let model = dataList[indexPath.row] as! WEDrawFoodListModel
+            cell.title.text = model.foodName
+            if model.isSelect {
+                cell.layer.borderColor = UIColor.red.cgColor
+            } else {
+                cell.layer.borderColor = UIColor.black.cgColor
+            }
+        }
         return cell
     }
 }

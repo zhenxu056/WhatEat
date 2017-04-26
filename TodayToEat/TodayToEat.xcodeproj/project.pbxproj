@@ -10,13 +10,8 @@
 		176E88A21EA13D1800878560 /* WEAddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E88A11EA13D1800878560 /* WEAddFoodViewController.swift */; };
 		176E88A51EA1415000878560 /* AlreadyFood.plist in Resources */ = {isa = PBXBuildFile; fileRef = 176E88A41EA1415000878560 /* AlreadyFood.plist */; };
 		176E88CD1EA147FB00878560 /* WEFoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E88CC1EA147FB00878560 /* WEFoodModel.swift */; };
+		BD071CC61EAD889D000338D2 /* WEDrawFoodListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD071CC51EAD889D000338D2 /* WEDrawFoodListModel.swift */; };
 		BD27F30E1EA466E400490CC0 /* WEFoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD27F30D1EA466E400490CC0 /* WEFoodViewModel.swift */; };
-		BD27F3111EA491FA00490CC0 /* collectionFood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD27F30F1EA491FA00490CC0 /* collectionFood.xcdatamodeld */; };
-		BD27F3131EA4938A00490CC0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD27F3121EA4938A00490CC0 /* CoreData.framework */; };
-		BD484FAA1EA5A23A00171A05 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD484FA91EA5A23A00171A05 /* CoreDataHelper.swift */; };
-		BD484FAD1EA5A2CC00171A05 /* FoodDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD484FAB1EA5A2CC00171A05 /* FoodDB+CoreDataClass.swift */; };
-		BD484FAE1EA5A2CC00171A05 /* FoodDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD484FAC1EA5A2CC00171A05 /* FoodDB+CoreDataProperties.swift */; };
-		BD484FB01EA5A3B700171A05 /* ZXStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD484FAF1EA5A3B700171A05 /* ZXStoreManager.swift */; };
 		BD484FB21EA5B21200171A05 /* WEAddFoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD484FB11EA5B21200171A05 /* WEAddFoodTableViewCell.swift */; };
 		BD484FB41EA5B68100171A05 /* WEConfigureFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD484FB31EA5B68100171A05 /* WEConfigureFile.swift */; };
 		BD484FB61EA5BBA700171A05 /* WEFoodTextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD484FB51EA5BBA700171A05 /* WEFoodTextViewTableViewCell.swift */; };
@@ -25,6 +20,13 @@
 		BD5D6B711EA99B3B001F38C8 /* WESelectMenuListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D6B701EA99B3B001F38C8 /* WESelectMenuListView.swift */; };
 		BD5D6B731EA9B0D3001F38C8 /* WEFoodNameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D6B721EA9B0D3001F38C8 /* WEFoodNameCollectionViewCell.swift */; };
 		BD5EA3F91EA84D11000C9683 /* LotteryRouletteView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5EA3F81EA84D11000C9683 /* LotteryRouletteView.m */; };
+		BD5F454D1EADDC6D00ABC340 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5F45421EADDC6D00ABC340 /* FMDatabase.m */; };
+		BD5F454E1EADDC6D00ABC340 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5F45441EADDC6D00ABC340 /* FMDatabaseAdditions.m */; };
+		BD5F454F1EADDC6D00ABC340 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5F45461EADDC6D00ABC340 /* FMDatabasePool.m */; };
+		BD5F45501EADDC6D00ABC340 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5F45481EADDC6D00ABC340 /* FMDatabaseQueue.m */; };
+		BD5F45511EADDC6D00ABC340 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5F454B1EADDC6D00ABC340 /* FMResultSet.m */; };
+		BD5F45521EADDC6D00ABC340 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD5F454C1EADDC6D00ABC340 /* Info.plist */; };
+		BD5F45681EADE2E800ABC340 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BD071CE11EAD9640000338D2 /* libsqlite3.tbd */; };
 		BD93FBFA1E9733B3006834F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD93FBF91E9733B3006834F1 /* AppDelegate.swift */; };
 		BD93FC011E9733B3006834F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD93FC001E9733B3006834F1 /* Assets.xcassets */; };
 		BD93FC041E9733B3006834F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD93FC021E9733B3006834F1 /* LaunchScreen.storyboard */; };
@@ -52,7 +54,6 @@
 		BD9A10A81E9B235F00A5C5B9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9A10A71E9B235F00A5C5B9 /* SystemConfiguration.framework */; };
 		BD9A10AA1E9B236800A5C5B9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9A10A91E9B236800A5C5B9 /* CoreGraphics.framework */; };
 		BD9A10AC1E9B237700A5C5B9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9A10AB1E9B237700A5C5B9 /* Security.framework */; };
-		BD9A10AE1E9B237F00A5C5B9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9A10AD1E9B237F00A5C5B9 /* libsqlite3.0.tbd */; };
 		BD9A10B01E9B238900A5C5B9 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9A10AF1E9B238900A5C5B9 /* CoreTelephony.framework */; };
 		BD9A10B21E9B239300A5C5B9 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9A10B11E9B239300A5C5B9 /* libstdc++.6.0.9.tbd */; };
 		BD9A10B51E9B2C8000A5C5B9 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD9A10B41E9B2C8000A5C5B9 /* mapapi.bundle */; };
@@ -122,13 +123,11 @@
 		176E88A11EA13D1800878560 /* WEAddFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WEAddFoodViewController.swift; sourceTree = "<group>"; };
 		176E88A41EA1415000878560 /* AlreadyFood.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AlreadyFood.plist; sourceTree = "<group>"; };
 		176E88CC1EA147FB00878560 /* WEFoodModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WEFoodModel.swift; sourceTree = "<group>"; };
+		BD071CC51EAD889D000338D2 /* WEDrawFoodListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WEDrawFoodListModel.swift; sourceTree = "<group>"; };
+		BD071CE11EAD9640000338D2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		BD071CE41EAD996A000338D2 /* TodayToEat-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TodayToEat-Bridging-Header.h"; sourceTree = "<group>"; };
 		BD27F30D1EA466E400490CC0 /* WEFoodViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WEFoodViewModel.swift; sourceTree = "<group>"; };
-		BD27F3101EA491FA00490CC0 /* collectionFood.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = collectionFood.xcdatamodel; sourceTree = "<group>"; };
 		BD27F3121EA4938A00490CC0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		BD484FA91EA5A23A00171A05 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
-		BD484FAB1EA5A2CC00171A05 /* FoodDB+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FoodDB+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BD484FAC1EA5A2CC00171A05 /* FoodDB+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FoodDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BD484FAF1EA5A3B700171A05 /* ZXStoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZXStoreManager.swift; sourceTree = "<group>"; };
 		BD484FB11EA5B21200171A05 /* WEAddFoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WEAddFoodTableViewCell.swift; sourceTree = "<group>"; };
 		BD484FB31EA5B68100171A05 /* WEConfigureFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WEConfigureFile.swift; sourceTree = "<group>"; };
 		BD484FB51EA5BBA700171A05 /* WEFoodTextViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WEFoodTextViewTableViewCell.swift; sourceTree = "<group>"; };
@@ -139,6 +138,18 @@
 		BD5D6B721EA9B0D3001F38C8 /* WEFoodNameCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WEFoodNameCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD5EA3F71EA84D11000C9683 /* LotteryRouletteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryRouletteView.h; sourceTree = "<group>"; };
 		BD5EA3F81EA84D11000C9683 /* LotteryRouletteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryRouletteView.m; sourceTree = "<group>"; };
+		BD5F45411EADDC6D00ABC340 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		BD5F45421EADDC6D00ABC340 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		BD5F45431EADDC6D00ABC340 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		BD5F45441EADDC6D00ABC340 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		BD5F45451EADDC6D00ABC340 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		BD5F45461EADDC6D00ABC340 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		BD5F45471EADDC6D00ABC340 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		BD5F45481EADDC6D00ABC340 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		BD5F45491EADDC6D00ABC340 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		BD5F454A1EADDC6D00ABC340 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		BD5F454B1EADDC6D00ABC340 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		BD5F454C1EADDC6D00ABC340 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD93FBF61E9733B3006834F1 /* TodayToEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayToEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD93FBF91E9733B3006834F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD93FC001E9733B3006834F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,7 +175,6 @@
 		BD9A108D1E9B1D0C00A5C5B9 /* BaiduMapAPI_Radar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Radar.framework; sourceTree = "<group>"; };
 		BD9A108E1E9B1D0C00A5C5B9 /* BaiduMapAPI_Search.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Search.framework; sourceTree = "<group>"; };
 		BD9A108F1E9B1D0C00A5C5B9 /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
-		BD9A10971E9B1D2E00A5C5B9 /* TodayToEat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TodayToEat-Bridging-Header.h"; sourceTree = "<group>"; };
 		BD9A109C1E9B1E9700A5C5B9 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		BD9A109D1E9B1E9700A5C5B9 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		BD9A10A11E9B234600A5C5B9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -229,10 +239,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD27F3131EA4938A00490CC0 /* CoreData.framework in Frameworks */,
+				BD5F45681EADE2E800ABC340 /* libsqlite3.tbd in Frameworks */,
 				BD9A10B21E9B239300A5C5B9 /* libstdc++.6.0.9.tbd in Frameworks */,
 				BD9A10B01E9B238900A5C5B9 /* CoreTelephony.framework in Frameworks */,
-				BD9A10AE1E9B237F00A5C5B9 /* libsqlite3.0.tbd in Frameworks */,
 				BD9A10AC1E9B237700A5C5B9 /* Security.framework in Frameworks */,
 				BD9A10AA1E9B236800A5C5B9 /* CoreGraphics.framework in Frameworks */,
 				BD9A10A81E9B235F00A5C5B9 /* SystemConfiguration.framework in Frameworks */,
@@ -287,10 +296,6 @@
 		BD484FA81EA5A22400171A05 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				BD484FAB1EA5A2CC00171A05 /* FoodDB+CoreDataClass.swift */,
-				BD484FAC1EA5A2CC00171A05 /* FoodDB+CoreDataProperties.swift */,
-				BD484FA91EA5A23A00171A05 /* CoreDataHelper.swift */,
-				BD484FAF1EA5A3B700171A05 /* ZXStoreManager.swift */,
 				BD484FB31EA5B68100171A05 /* WEConfigureFile.swift */,
 			);
 			path = Utils;
@@ -299,6 +304,7 @@
 		BD484FBB1EA5BC4100171A05 /* libraries */ = {
 			isa = PBXGroup;
 			children = (
+				BD5F45401EADDC6D00ABC340 /* fmdb */,
 				BDF977461EA8A5D200085129 /* drawCollection */,
 				BD5EA3F61EA84CFF000C9683 /* DrawLuck */,
 				BDB0C0FC1EA600BC0060C30E /* Source */,
@@ -323,6 +329,25 @@
 				BD5EA3F81EA84D11000C9683 /* LotteryRouletteView.m */,
 			);
 			path = DrawLuck;
+			sourceTree = "<group>";
+		};
+		BD5F45401EADDC6D00ABC340 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				BD5F45411EADDC6D00ABC340 /* FMDatabase.h */,
+				BD5F45421EADDC6D00ABC340 /* FMDatabase.m */,
+				BD5F45431EADDC6D00ABC340 /* FMDatabaseAdditions.h */,
+				BD5F45441EADDC6D00ABC340 /* FMDatabaseAdditions.m */,
+				BD5F45451EADDC6D00ABC340 /* FMDatabasePool.h */,
+				BD5F45461EADDC6D00ABC340 /* FMDatabasePool.m */,
+				BD5F45471EADDC6D00ABC340 /* FMDatabaseQueue.h */,
+				BD5F45481EADDC6D00ABC340 /* FMDatabaseQueue.m */,
+				BD5F45491EADDC6D00ABC340 /* FMDB.h */,
+				BD5F454A1EADDC6D00ABC340 /* FMResultSet.h */,
+				BD5F454B1EADDC6D00ABC340 /* FMResultSet.m */,
+				BD5F454C1EADDC6D00ABC340 /* Info.plist */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 		BD93FBED1E9733B3006834F1 = {
@@ -358,10 +383,10 @@
 				BD93FC2C1E9734E5006834F1 /* FoodDraw */,
 				BD93FC311E9734E5006834F1 /* FoodMenu */,
 				BD93FBF91E9733B3006834F1 /* AppDelegate.swift */,
+				BD071CE41EAD996A000338D2 /* TodayToEat-Bridging-Header.h */,
 				BD93FC001E9733B3006834F1 /* Assets.xcassets */,
 				BD93FC021E9733B3006834F1 /* LaunchScreen.storyboard */,
 				BD93FC051E9733B3006834F1 /* Info.plist */,
-				BD9A10971E9B1D2E00A5C5B9 /* TodayToEat-Bridging-Header.h */,
 			);
 			path = TodayToEat;
 			sourceTree = "<group>";
@@ -450,6 +475,7 @@
 		BD93FC2E1E9734E5006834F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BD071CC51EAD889D000338D2 /* WEDrawFoodListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -551,6 +577,7 @@
 		BD9A10A01E9B234600A5C5B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD071CE11EAD9640000338D2 /* libsqlite3.tbd */,
 				BD27F3121EA4938A00490CC0 /* CoreData.framework */,
 				BD9A10B11E9B239300A5C5B9 /* libstdc++.6.0.9.tbd */,
 				BD9A10AF1E9B238900A5C5B9 /* CoreTelephony.framework */,
@@ -569,7 +596,6 @@
 			isa = PBXGroup;
 			children = (
 				BD9A10B41E9B2C8000A5C5B9 /* mapapi.bundle */,
-				BD27F30F1EA491FA00490CC0 /* collectionFood.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -745,6 +771,7 @@
 				BD9A10B51E9B2C8000A5C5B9 /* mapapi.bundle in Resources */,
 				BD93FC011E9733B3006834F1 /* Assets.xcassets in Resources */,
 				BD93FC481E976900006834F1 /* FoodMenu.storyboard in Resources */,
+				BD5F45521EADDC6D00ABC340 /* Info.plist in Resources */,
 				BDF977551EA8B3A400085129 /* timg.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -774,13 +801,14 @@
 				BD93FC421E9736B3006834F1 /* WEFoodMenuViewController.swift in Sources */,
 				BDB0C1331EA600BC0060C30E /* ConstraintMakerRelatable.swift in Sources */,
 				BDB0C1301EA600BC0060C30E /* ConstraintMakerExtendable.swift in Sources */,
+				BD5F454F1EADDC6D00ABC340 /* FMDatabasePool.m in Sources */,
 				BD93FC3C1E97362B006834F1 /* WEBaseMainViewController.swift in Sources */,
+				BD5F454E1EADDC6D00ABC340 /* FMDatabaseAdditions.m in Sources */,
 				BDB0C1251EA600BC0060C30E /* ConstraintDSL.swift in Sources */,
 				BDB0C13A1EA600BC0060C30E /* ConstraintView+Extensions.swift in Sources */,
 				176E88CD1EA147FB00878560 /* WEFoodModel.swift in Sources */,
 				BD5D6B711EA99B3B001F38C8 /* WESelectMenuListView.swift in Sources */,
 				BDB0C1381EA600BC0060C30E /* ConstraintRelatableTarget.swift in Sources */,
-				BD484FAE1EA5A2CC00171A05 /* FoodDB+CoreDataProperties.swift in Sources */,
 				BDB0C1371EA600BC0060C30E /* ConstraintPriorityTarget.swift in Sources */,
 				BDB0C1221EA600BC0060C30E /* ConstraintConfig.swift in Sources */,
 				BD484FB41EA5B68100171A05 /* WEConfigureFile.swift in Sources */,
@@ -788,20 +816,22 @@
 				BD5EA3F91EA84D11000C9683 /* LotteryRouletteView.m in Sources */,
 				BD93FC401E9736A7006834F1 /* WEFoodDrawViewController.swift in Sources */,
 				BD27F30E1EA466E400490CC0 /* WEFoodViewModel.swift in Sources */,
+				BD5F45511EADDC6D00ABC340 /* FMResultSet.m in Sources */,
 				BD93FC461E9768E0006834F1 /* WEBaseNavigationController.swift in Sources */,
 				BDB0C13B1EA600BC0060C30E /* ConstraintView.swift in Sources */,
 				BDF977491EA8A5E700085129 /* RGPaperLayout.m in Sources */,
 				BD484FB61EA5BBA700171A05 /* WEFoodTextViewTableViewCell.swift in Sources */,
-				BD484FAD1EA5A2CC00171A05 /* FoodDB+CoreDataClass.swift in Sources */,
+				BD5F454D1EADDC6D00ABC340 /* FMDatabase.m in Sources */,
 				BDB0C1261EA600BC0060C30E /* ConstraintInsets.swift in Sources */,
+				BD5F45501EADDC6D00ABC340 /* FMDatabaseQueue.m in Sources */,
 				BDB0C12D1EA600BC0060C30E /* ConstraintLayoutSupportDSL.swift in Sources */,
+				BD071CC61EAD889D000338D2 /* WEDrawFoodListModel.swift in Sources */,
 				BDB0C13C1EA600BC0060C30E /* ConstraintViewDSL.swift in Sources */,
 				176E88A21EA13D1800878560 /* WEAddFoodViewController.swift in Sources */,
 				BDF9774D1EA8AA4700085129 /* WEDrawFoodCollectionViewCell.swift in Sources */,
 				BDE00C5A1EA742EC001B0215 /* WEDrawFoodView.swift in Sources */,
 				BDB0C1341EA600BC0060C30E /* ConstraintMultiplierTarget.swift in Sources */,
 				BDB0C12F1EA600BC0060C30E /* ConstraintMakerEditable.swift in Sources */,
-				BD27F3111EA491FA00490CC0 /* collectionFood.xcdatamodeld in Sources */,
 				BDE00BF11EA6ED29001B0215 /* WEImageCenterTableViewCell.swift in Sources */,
 				BDB0C1241EA600BC0060C30E /* ConstraintDescription.swift in Sources */,
 				BDB0C1361EA600BC0060C30E /* ConstraintPriority.swift in Sources */,
@@ -817,7 +847,6 @@
 				BDB0C1411EA600BC0060C30E /* UILayoutSupport+Extensions.swift in Sources */,
 				BDB0C1311EA600BC0060C30E /* ConstraintMakerFinalizable.swift in Sources */,
 				BDB0C12C1EA600BC0060C30E /* ConstraintLayoutSupport.swift in Sources */,
-				BD484FAA1EA5A23A00171A05 /* CoreDataHelper.swift in Sources */,
 				BD93FC3E1E973698006834F1 /* WECollectionFoodViewController.swift in Sources */,
 				BDB0C1231EA600BC0060C30E /* ConstraintConstantTarget.swift in Sources */,
 				BD484FBF1EA5BC4100171A05 /* SZTextView.m in Sources */,
@@ -829,7 +858,6 @@
 				BDB0C1391EA600BC0060C30E /* ConstraintRelation.swift in Sources */,
 				BDB0C13D1EA600BC0060C30E /* Debugging.swift in Sources */,
 				BD93FBFA1E9733B3006834F1 /* AppDelegate.swift in Sources */,
-				BD484FB01EA5A3B700171A05 /* ZXStoreManager.swift in Sources */,
 				BDB0C1211EA600BC0060C30E /* ConstraintAttributes.swift in Sources */,
 				BDB0C1281EA600BC0060C30E /* ConstraintItem.swift in Sources */,
 			);
@@ -988,7 +1016,7 @@
 					"$(PROJECT_DIR)/TodayToEat/ThirdFramework/thirdlibs",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.XMRuiTong.chisha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Sunflower.TodayToEat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/TodayToEat/TodayToEat-Bridging-Header.h";
@@ -1016,7 +1044,7 @@
 					"$(PROJECT_DIR)/TodayToEat/ThirdFramework/thirdlibs",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.XMRuiTong.chisha;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Sunflower.TodayToEat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/TodayToEat/TodayToEat-Bridging-Header.h";
@@ -1122,19 +1150,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		BD27F30F1EA491FA00490CC0 /* collectionFood.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				BD27F3101EA491FA00490CC0 /* collectionFood.xcdatamodel */,
-			);
-			currentVersion = BD27F3101EA491FA00490CC0 /* collectionFood.xcdatamodel */;
-			path = collectionFood.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = BD93FBEE1E9733B3006834F1 /* Project object */;
 }

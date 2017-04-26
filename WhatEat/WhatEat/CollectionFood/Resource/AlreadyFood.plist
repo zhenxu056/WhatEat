@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>describe</key>
+		<string>这就是土豆，黄色的</string>
+		<key>id</key>
+		<string>1</string>
+		<key>foodName</key>
+		<string>辣椒</string>
+	</dict>
+	<dict>
+		<key>describe</key>
+		<string>这就是土豆，黄色的</string>
+		<key>id</key>
+		<string>2</string>
+		<key>foodName</key>
+		<string>西瓜</string>
+	</dict>
+	<dict>
+		<key>describe</key>
+		<string>这就是土豆，黄色的</string>
+		<key>id</key>
+		<string>3</string>
+		<key>foodName</key>
+		<string>苦瓜</string>
+	</dict>
+	<dict>
+		<key>describe</key>
+		<string>这就是土豆，黄色的</string>
+		<key>id</key>
+		<string>4</string>
+		<key>foodName</key>
+		<string>西红柿</string>
+	</dict>
+	<dict>
+		<key>describe</key>
+		<string>这就是土豆，黄色的</string>
+		<key>id</key>
+		<string>5</string>
+		<key>foodName</key>
+		<string>鸡蛋</string>
+	</dict>
+	<dict>
+		<key>describe</key>
+		<string>这就是土豆，黄色的</string>
+		<key>id</key>
+		<string>6</string>
+		<key>foodName</key>
+		<string>鸡肉</string>
+	</dict>
+</array>
+</plist>
