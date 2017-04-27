@@ -78,6 +78,9 @@ extension WEAddFoodViewController: UITableViewDataSource, UITableViewDelegate {
         }  else if indexPath.section == 2 {
             let textField = "WELocationSearchTableViewCell"
             let cell: WELocationSearchTableViewCell = WELocationSearchTableViewCell(style: .subtitle, reuseIdentifier: textField)
+            cell.textField.tag = 102
+            cell.textField.delegate = self
+            cell.button.addTarget(self, action: #selector(selectLocationAction(sender:)), for: .touchUpInside)
             return cell
         } else if indexPath.section == 3 {
             let textField = "WEFoodTextViewTableViewCell"
@@ -99,9 +102,7 @@ extension WEAddFoodViewController: UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let serchBar = WELocationSearchViewController()
-        let serchNa = WEBaseNavigationController(rootViewController: serchBar)         
-        self.present(serchNa, animated: true, completion: nil)
+        
         
     }
 }
@@ -109,6 +110,19 @@ extension WEAddFoodViewController: UITableViewDataSource, UITableViewDelegate {
 fileprivate extension WEAddFoodViewController {
     func setUI() {
         self.view.addSubview(tableView)
+    }
+    
+    @objc func selectLocationAction(sender: UIButton) {
+        let serchBar = WELocationSearchViewController()
+        let serchNa = WEBaseNavigationController(rootViewController: serchBar)
+        serchBar.block = { ann in
+            let indexPath = IndexPath(item: 0, section: 2)
+            
+            let cell = self.tableView.cellForRow(at: indexPath) as! WELocationSearchTableViewCell
+            print(ann.title)
+            cell.textField.text = ann.title
+        }
+        self.present(serchNa, animated: true, completion: nil)
     }
 }
 

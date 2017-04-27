@@ -21,28 +21,36 @@ class WELocationSearchViewController: WEBaseMainViewController {
         return temRightBarItem
     }()
     
+    var annotationImage: UIImageView?
+    var geocodeSearch: BMKGeoCodeSearch!
+    var selectAnnotation:BMKPointAnnotation = BMKPointAnnotation()
+    var block: sendBMKPointAnnotation?
+    
     var mapView: BMKMapView = {
         let mapView = BMKMapView(frame: UIScreen.main.bounds)
         mapView.viewWillAppear()
         mapView.mapType = UInt(BMKMapTypeStandard)
         mapView.isZoomEnabled = true
+        mapView.showMapScaleBar = true
+        mapView.zoomLevel = 17.0
         return mapView
     }()
     
     var locService: BMKLocationService?
-    var geocodeSearch: BMKGeoCodeSearch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "选择位置"
         addUI()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        locService?.delegate = self
-        geocodeSearch.delegate = self
+        super.viewWillAppear(animated) 
         mapView.delegate = self
+        locService?.delegate = self
         mapView.viewWillAppear()
-        
+        geocodeSearch.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -56,26 +64,13 @@ class WELocationSearchViewController: WEBaseMainViewController {
 }
 
 //百度地图
-extension WELocationSearchViewController: BMKMapViewDelegate, BMKLocationServiceDelegate, BMKGeoCodeSearchDelegate {
+extension WELocationSearchViewController: BMKMapViewDelegate,BMKLocationServiceDelegate,BMKGeoCodeSearchDelegate {
     func didUpdate(_ userLocation: BMKUserLocation!) {
         let region = BMKCoordinateRegionMake(userLocation.location.coordinate, BMKCoordinateSpanMake(0.01, 0.01))
         mapView.setRegion(region, animated: true)
-        
-        let annotation = BMKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2DMake(userLocation.location.coordinate.latitude, userLocation.location.coordinate.longitude)
-        mapView.addAnnotation(annotation)
-        
-        mapView.updateLocationData(userLocation)
     }
     
     // MARK: - BMKMapViewDelegate
-    
-    /**
-     *根据anntation生成对应的View
-     *@param mapView 地图View
-     *@param annotation 指定的标注
-     *@return 生成的标注View
-     */
     func mapView(_ mapView: BMKMapView!, viewFor annotation: BMKAnnotation!) -> BMKAnnotationView! {
         let AnnotationViewID = "renameMark"
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: AnnotationViewID) as! BMKPinAnnotationView?
@@ -91,33 +86,35 @@ extension WELocationSearchViewController: BMKMapViewDelegate, BMKLocationService
         annotationView?.annotation = annotation
         return annotationView
     }
-    // MARK: - BMKGeoCodeSearchDelegate
+    
+    func mapView(_ mapView: BMKMapView!, regionDidChangeAnimated animated: Bool) {
+        
+    }
     
     /**
-     *返回地址信息搜索结果
+     *返回反地理编码搜索结果
      *@param searcher 搜索对象
-     *@param result 搜索结BMKGeoCodeSearch果
+     *@param result 搜索结果
      *@param error 错误号，@see BMKSearchErrorCode
      */
-    func onGetGeoCodeResult(_ searcher: BMKGeoCodeSearch!, result: BMKGeoCodeResult!, errorCode error: BMKSearchErrorCode) {
-        print("onGetGeoCodeResult error: \(error)")
+    func onGetReverseGeoCodeResult(_ searcher: BMKGeoCodeSearch!, result: BMKReverseGeoCodeResult!, errorCode error: BMKSearchErrorCode) {
+        print("onGetReverseGeoCodeResult error: \(error)")
         
-        mapView.removeAnnotations(mapView.annotations)
         if error == BMK_SEARCH_NO_ERROR {
             let item = BMKPointAnnotation()
             item.coordinate = result.location
             item.title = result.address
-            mapView.addAnnotation(item)
-            mapView.centerCoordinate = result.location
+            print(result.address)
+            selectAnnotation = item
             
-            let showMessage = "纬度:\(item.coordinate.latitude)，经度:\(item.coordinate.longitude)"
-            print(showMessage)
-            let alertView = UIAlertController(title: "正向地理编码", message: showMessage, preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertView.addAction(okAction)
-            self.present(alertView, animated: true, completion: nil)
+            if self.block != nil {
+                self.block!(selectAnnotation)
+                self.dismiss(animated: true, completion: nil)
+            }
         }
     }
+    
+    
 }
 
 extension WELocationSearchViewController {
@@ -125,10 +122,10 @@ extension WELocationSearchViewController {
         
         self.navigationItem.rightBarButtonItem = rightBarItem
         self.navigationItem.leftBarButtonItem = leftBarItem
-        
-        self.view.addSubview(mapView)
-        locService = BMKLocationService()
+        self.view.addSubview(mapView) 
         geocodeSearch = BMKGeoCodeSearch()
+        
+        locService = BMKLocationService()
         locService?.startUserLocationService()
         
         mapView.showsUserLocation = false//先关闭显示的定位图层
@@ -136,25 +133,33 @@ extension WELocationSearchViewController {
         mapView.showsUserLocation = true//显示定位图层
         
         
-        let locationView = WESearchLocationView(frame: CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height/2))
-        locationView.mapView = mapView
-        locationView.geocodeSearch = geocodeSearch
+        let locationView = WESearchLocationView(frame: CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
+        locationView.block = { item in
+            let region = BMKCoordinateRegionMake(item.coordinate, BMKCoordinateSpanMake(0.01, 0.01))
+            self.mapView.setRegion(region, animated: true)
+        }
         self.view.addSubview(locationView) 
+        
+        let point = UIScreen.main.bounds.size
+        annotationImage = UIImageView(frame: CGRect(x: point.width/2-10, y: point.height/2-20, width: 40, height: 40))
+        annotationImage?.image = UIImage(named: "myPin_red")
+        self.view.addSubview(annotationImage!)
     }
 }
 
 extension WELocationSearchViewController {
     func rightBarItemAction(sender: UIBarButtonItem) {
-        let geocodeSearchOption = BMKGeoCodeSearchOption()
-//        geocodeSearchOption.city = cityField.text
-//        geocodeSearchOption.address = addressField.text
-        let flag = geocodeSearch.geoCode(geocodeSearchOption)
+        let pint = annotationImage?.center
+        let location: CLLocationCoordinate2D = mapView.convert(pint!, toCoordinateFrom: mapView)
+        
+        let reverseGeocodeSearchOption = BMKReverseGeoCodeOption()
+        reverseGeocodeSearchOption.reverseGeoPoint = CLLocationCoordinate2DMake(location.latitude, location.longitude)
+        let flag = geocodeSearch.reverseGeoCode(reverseGeocodeSearchOption)
         if flag {
-            print("geo 检索发送成功")
+            print("反geo 检索发送成功")
         } else {
-            print("geo 检索发送失败")
+            print("反geo 检索发送失败")
         }
-
     }
     
     func leftBarItemAction(sender: UIBarButtonItem) {

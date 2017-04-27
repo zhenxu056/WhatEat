@@ -45,7 +45,7 @@ extension WEFoodMenuViewController {
     func setMapView() {
         _mapView = BMKMapView(frame: UIScreen.main.bounds)
         _mapView?.viewWillAppear()
-        _mapView?.mapType = UInt(BMKMapTypeSatellite)
+        _mapView?.mapType = UInt(BMKMapTypeStandard)
         _mapView?.delegate = self // 此处记得不用的时候需要置nil，否则影响内存的释放
         self.view.addSubview(_mapView!)
     }
